@@ -12,7 +12,7 @@
         android:id="@+id/settingsToolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_settings_toolbar_height"
-        android:background="@color/colorMenuBackground"
+        android:background="@color/colorDefButton"
         app:navigationIcon="@drawable/ic_back">
 
         <TextView

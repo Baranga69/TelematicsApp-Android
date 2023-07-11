@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/bg_onboard_first">
+    tools:background="#F2F3F5">
 
     <FrameLayout
         android:layout_width="match_parent"

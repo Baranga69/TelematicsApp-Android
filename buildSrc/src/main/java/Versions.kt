@@ -1,6 +1,6 @@
 object Versions {
 
-    const val kotlin = "1.5.0"
+    const val kotlin = "1.6.21"
 
     const val trackingApi = "2.2.255"
     const val loginAuthFramework = "1.0.1"
@@ -10,7 +10,7 @@ object Versions {
     const val appcompat = "1.2.0"
     const val constraintLayout = "2.0.1"
     const val material = "1.2.0"
-    const val daggerHilt = "2.35"
+    const val daggerHilt = "2.42"
     const val daggerHiltAndroidX = "1.0.0-alpha03"
     const val coroutines = "1.4.2"
     const val javaxInject = "1"
@@ -46,7 +46,7 @@ object Versions {
 object PluginVersion {
 
     const val gradle = "4.1.3"
-    const val kotlin = "1.4.32"
+    const val kotlin = "1.6.21"
     const val googleServices = "4.3.8"
     const val firebaseCrashlytics = "2.7.1"
 }

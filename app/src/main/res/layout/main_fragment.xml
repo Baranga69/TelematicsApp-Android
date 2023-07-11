@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_above="@id/mainBottomNav"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_onboard_first" />
+        android:src="#F2F3F5" />
 
     <include
         android:id="@+id/main_toolbar"
@@ -27,16 +27,18 @@
         android:id="@+id/main_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/mainBottomNav" />
+        android:layout_above="@id/mainBottomNav"
+        android:layout_marginBottom="-2dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mainBottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="3dp"
         android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/navigationMenuBarOnMain"
+        app:backgroundTint="@color/colorDashTabBackground"
         app:itemIconTint="@color/menu_icon_color_sel"
-        app:itemRippleColor="@android:color/transparent"
+        app:itemRippleColor="@color/colorDefButton"
         app:itemTextColor="@color/bottom_menu_item_text_sel"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_menu" />

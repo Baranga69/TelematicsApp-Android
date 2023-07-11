@@ -4,7 +4,7 @@
     android:id="@+id/tripDetailsContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorMapBackground">
+    android:background="@color/colorAuthScreenBg">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/tripDetailsContent"

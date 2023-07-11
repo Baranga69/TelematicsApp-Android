@@ -38,15 +38,15 @@ android {
     signingConfigs {
         getByName("debug") {
             keyAlias = "key0"
-            keyPassword = "******"
-            storeFile = file("path_to_file/keystore.jks")
-            storePassword = "******"
+            keyPassword = "123456"
+            storeFile = file("C:/Users/keith/Desktop/Work/Github_repos/keystore.jks")
+            storePassword = "123456"
         }
         create("release") {
             keyAlias = "key0"
-            keyPassword = "******"
-            storeFile = file("path_to_file/keystore.jks")
-            storePassword = "******"
+            keyPassword = "123456"
+            storeFile = file("C:/Users/keith/Desktop/Work/Github_repos/keystore.jks")
+            storePassword = "123456"
         }
     }
 

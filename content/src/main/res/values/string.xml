@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YOUR_LABEL</string>
+    <string name="app_name">Logis</string>
 
     <string name="nav_item_feed">Feed</string>
     <string name="nav_item_dashboard">Dashboard</string>
@@ -9,15 +9,15 @@
     <string name="nav_item_profile">Profile</string>
 
     <!-- onboarding -->
-    <string name="onboarding_screen_1_title">Welcome to Damoov\'s Zenroad</string>
-    <string name="onboarding_screen_2_title">Open-source and Out-of-the-box</string>
-    <string name="onboarding_screen_3_title">Track that moves with Damoov!</string>
-    <string name="onboarding_screen_4_title">Prepare to get on the Telematics Track</string>
+    <string name="onboarding_screen_1_title">Welcome to Logis</string>
+    <string name="onboarding_screen_2_title">Vehicle Tracker and Fleet Management</string>
+    <string name="onboarding_screen_3_title">Track the moves with Logis</string>
+    <string name="onboarding_screen_4_title">Telematics to improve your life</string>
 
-    <string name="onboarding_screen_1_text">You\'re about to launch our demo app Zenroad running on Damoov\'s Telematics SDK.</string>
-    <string name="onboarding_screen_2_text">Zenroad is open-source and available for customization at no cost. This means you can launch your Zenroad-like app almost instantly.</string>
-    <string name="onboarding_screen_3_text">We\'ve built a fully-featured Damoov\'s Telematics Suite to solve your needs in telematics tracking. We have it all: from plug&amp;play to complex, custom flows.</string>
-    <string name="onboarding_screen_4_text">Be sure to sign up at <a href="http://damoov.com/">damoov.com</a> to get in touch with us and see the full demo of the platform: SDK, API, Web-Interface and much more.</string>
+    <string name="onboarding_screen_1_text">You\'re about to launch this Telematics application</string>
+    <string name="onboarding_screen_2_text">This can help you run your logistics operation.</string>
+    <string name="onboarding_screen_3_text">Logis will help you with a wealth of data to learn and then improve your driving characteristics for gains.</string>
+    <string name="onboarding_screen_4_text">Let\'s get going</string>
 
     <!-- Login Screen -->
     <string name="login_screen_join">JOIN</string>

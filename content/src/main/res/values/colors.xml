@@ -8,7 +8,7 @@
     <color name="colorToolbarCenterColor">#595cb6</color>
     <color name="colorToolbarEndColor">#494ca5</color>
 
-    <color name="colorMenuBackground">#464646</color>
+    <color name="colorMenuBackground">#554994</color>
     <color name="colorMenuBackgroundAlpha">#8C000000</color>
 
     <color name="navigationMenuBarOnMain">#464646</color>
@@ -32,7 +32,7 @@
     <color name="colorEventTripGrayText">#AFAFAF</color>
     <color name="colorEventTripRightButtonDivider">#b7b7b7</color>
 
-    <color name="colorEventGreenLabelBg">#54c751</color>
+    <color name="colorEventGreenLabelBg">#554994</color>
     <color name="colorEventBlueLabelBg">#448ccb</color>
     <color name="colorEventGreyLabelBg">#acacac</color>
     <color name="colorEventOrangeLabelBg">#ff8400</color>
@@ -47,9 +47,9 @@
     <color name="colorRedButton">#e32626</color>
     <color name="colorOrangeButton">#FF8400</color>
 
-    <color name="colorDefButton">#54c751</color>
+    <color name="colorDefButton">#554994</color>
     <color name="colorDefButtonDisabled">#a7a7a7</color>
-    <color name="colorDefButtonStroke">#54c751</color>
+    <color name="colorDefButtonStroke">#554994</color>
 
     <color name="colorTripButton">#e5f7e4</color>
     <color name="colorTripButtonDisabled">#80C5C5C5</color>
@@ -60,7 +60,7 @@
     <color name="colorOrangeText">#ff7e00</color>
     <color name="colorPurpleText">#b681d2</color>
     <color name="colorYellowText">#fedb41</color>
-    <color name="colorGreenText">#54c751</color>
+    <color name="colorGreenText">#554994</color>
     <color name="colorGrayText">#cccccc</color>
 
     <color name="colorScoreDivider">#e3e7ec</color>
@@ -71,7 +71,7 @@
     <color name="colorMapBackground">#cccccc</color>
 
     <!-- Route map colors-->
-    <color name="colorSpeedTypeNormal">#54c751</color>
+    <color name="colorSpeedTypeNormal">#554994</color>
     <color name="colorSpeedTypeMid">#ffd42d</color>
     <color name="colorSpeedTypeMid2">#ff7e00</color>
     <color name="colorSpeedTypeHigh">#FF0C0C</color>

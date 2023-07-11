@@ -18,6 +18,7 @@
         android:src="@drawable/ic_wizard_logo_back"
         android:translationX="20dp"
         android:translationY="50dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +28,7 @@
         android:id="@+id/registrationCommonLogo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/ic_auth_logo"
+        android:src="@drawable/logis_gradient"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/registrationContent"
         app:layout_constraintEnd_toEndOf="parent"

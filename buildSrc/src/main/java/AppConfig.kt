@@ -1,6 +1,6 @@
 object AppConfig {
-    const val applicationIdPrefix = "com.your_application_prefix"
-    private const val name = "your_application_name"
+    const val applicationIdPrefix = "com.test"
+    private const val name = "telemati"
 
     const val applicationId = "$applicationIdPrefix.$name"
     const val compileSdk = 32
@@ -16,10 +16,10 @@ object AppConfig {
 
     const val DASHBOARD_DISTANCE_LIMIT = "10" //in km
 
-    const val INSTANCE_ID = "\"YOUR_INSTANCE_ID\""
-    const val INSTANCE_KEY = "\"YOUR_INSTANCE_KEY\""
+    const val INSTANCE_ID = "\"5398f71a-a74f-4cff-a44c-74cdc9178f0a\""
+    const val INSTANCE_KEY = "\"e5106118-a18f-4cc6-82ff-c0d411ade22f\""
 
-    const val GOOGLE_MAP_API = "YOUR_GOOGLE_MAP_API_KEY"
+    const val GOOGLE_MAP_API = "AIzaSyB2JKuXk1J61r_InABhYYhpOvkFMqzgdK4"
 
     const val USER_SERVICE_URL = "\"https://user.telematicssdk.com/\""
     const val USER_SERVICE_URL_DEV = "\"https://user.telematicssdk.com/\""
