@@ -28,7 +28,7 @@
         android:id="@+id/registrationCommonLogo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logis_gradient"
+        android:src="@drawable/commerin"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/registrationContent"
         app:layout_constraintEnd_toEndOf="parent"

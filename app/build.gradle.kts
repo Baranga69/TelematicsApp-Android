@@ -35,18 +35,19 @@ android {
         }
     }
 
+
     signingConfigs {
         getByName("debug") {
-            keyAlias = "key0"
-            keyPassword = "123456"
-            storeFile = file("C:/Users/keith/Desktop/Work/Github_repos/keystore.jks")
-            storePassword = "123456"
+            keyAlias = "commerin"
+            keyPassword = "commerin23"
+            storeFile = file("/home/tappi/Desktop/rath_tech/commerin.jks")
+            storePassword = "commerin23"
         }
         create("release") {
-            keyAlias = "key0"
-            keyPassword = "123456"
-            storeFile = file("C:/Users/keith/Desktop/Work/Github_repos/keystore.jks")
-            storePassword = "123456"
+            keyAlias = "commerin"
+            keyPassword = "commerin23"
+            storeFile = file("/home/tappi/Desktop/rath_tech/commerin.jks")
+            storePassword = "commerin23"
         }
     }
 

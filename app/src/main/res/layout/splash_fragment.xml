@@ -18,7 +18,7 @@
         android:id="@+id/splashLogo"
         android:layout_width="@dimen/slide_logo_width"
         android:layout_height="@dimen/slide_logo_height"
-        android:src="@drawable/logis_gradient"
+        android:src="@drawable/commerin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

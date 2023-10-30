@@ -11,10 +11,10 @@
     <application
         android:name="com.telematics.zenroad.MainApplication"
         android:allowBackup="false"
-        android:icon="@drawable/logo_nobg"
+        android:icon="@drawable/commerin"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@drawable/logo_nobg"
+        android:roundIcon="@drawable/commerin"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBundle"
         android:usesCleartextTraffic="true"
