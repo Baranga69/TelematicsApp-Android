@@ -9,7 +9,11 @@ import com.raxeltelematics.v2.sdk.services.main.elm.BluetoothUtils
 import com.raxeltelematics.v2.sdk.services.main.elm.Constants
 import com.telematics.data.utils.ImageLoader
 import com.telematics.domain.model.on_demand.TrackingState
-import com.telematics.domain.model.tracking.*
+import com.telematics.domain.model.tracking.ChangeTripEvent
+import com.telematics.domain.model.tracking.ElmDevice
+import com.telematics.domain.model.tracking.ElmManagerLinkingResult
+import com.telematics.domain.model.tracking.TripData
+import com.telematics.domain.model.tracking.TripDetailsData
 import com.telematics.domain.repository.SettingsRepo
 import com.telematics.domain.repository.TrackingApiRepo
 import kotlinx.coroutines.flow.Flow
@@ -18,7 +22,7 @@ import javax.inject.Inject
 
 class TrackingUseCase
 @Inject constructor(
-    context: Context,
+    private val context: Context,
     private val trackingApiRepo: TrackingApiRepo,
     private val imageLoader: ImageLoader,
     private val settingsRepo: SettingsRepo
@@ -26,7 +30,7 @@ class TrackingUseCase
 
     private var notificationIntent: Intent? = null
 
-    init {
+    fun initializeSdk() {
         trackingApiRepo.setContext(context)
     }
 
@@ -53,7 +57,7 @@ class TrackingUseCase
         trackingApiRepo.setEnableTrackingSDK(false)
     }
 
-    fun startTracking(){
+    fun startTracking() {
         trackingApiRepo.startTracking()
     }
 

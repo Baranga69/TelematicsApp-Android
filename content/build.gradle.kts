@@ -1,52 +1,19 @@
 plugins {
-    id(Plugins.androidLibrary)
-    kotlin(Plugins.android)
-    id(Plugins.kotlinKapt)
+    id("telematics.android.library")
 }
 
 
 android {
-
-    compileSdkVersion(AppConfig.compileSdk)
-
-    defaultConfig {
-        versionCode = AppConfig.versionCode
-        versionName = AppConfig.versionName
-        minSdkVersion(AppConfig.minSdk)
-        targetSdkVersion(AppConfig.targetSdk)
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            debuggable(false)
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-
-        }
-        getByName("debug") {
-            isMinifyEnabled = false
-            debuggable(true)
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    namespace = "com.telematics.content"
 }
 
 dependencies {
 
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.fragment)
 
-    implementation(AppDependencies.appLibraries)
-    implementation(AppDependencies.moduleLibraries)
-    implementation(AppDependencies.navigateLibraries)
+    implementation(libs.androidx.navigation.fragment.ktx)
+
+    implementation(libs.google.material)
 }

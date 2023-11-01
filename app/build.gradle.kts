@@ -1,11 +1,9 @@
 plugins {
-    id(Plugins.application)
-    id(Plugins.daggerHiltPlugin)
-    kotlin(Plugins.android)
-    id(Plugins.kotlinKapt)
-    id(Plugins.googlePlugins)
-    id(Plugins.firebaseCrashlyticsPlugin)
-    id(Plugins.kotlinAndroid)
+    id("telematics.android.application")
+    id("telematics.android.hilt")
+    id("telematics.android.room")
+    id("telematics.android.retrofit")
+    id("telematics.android.application.firebase")
 }
 
 android {
@@ -16,14 +14,22 @@ android {
         applicationId = AppConfig.applicationId
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
-        minSdkVersion(AppConfig.minSdk)
-        targetSdkVersion(AppConfig.targetSdk)
+
+        applicationVariants.all {
+            val variant = this
+            variant.outputs
+                .map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
+                .forEach { output ->
+                    val outputFileName = "Telematics-${variant.baseName}-${variant.versionName}(${variant.versionCode}).apk"
+                    output.outputFileName = outputFileName
+                }
+         }
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            debuggable(false)
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -31,7 +37,7 @@ android {
         }
         getByName("debug") {
             isMinifyEnabled = false
-            debuggable(true)
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = false
         }
     }
 
@@ -69,33 +75,29 @@ android {
 
 dependencies {
 
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":data"))
+    implementation(project(":domain"))
+    implementation(project(":content"))
+    implementation(project(":authentication"))
+    implementation(project(":features:feed"))
+    implementation(project(":features:dashboard"))
+    implementation(project(":features:account"))
+    implementation(project(":features:leaderboard"))
+    implementation(project(":features:reward"))
+    implementation(project(":features:obd"))
 
-    implementation(AppDependencies.appLibraries)
+    // telematics sdk
+    implementation(libs.trackingApi)
 
-    implementation(AppDependencies.daggerHiltLibraries)
-    kapt(AppDependencies.daggerHiltCompiler)
-    implementation(AppDependencies.retrofitLibraries)
-    implementation(AppDependencies.lifecycleKtx)
-    implementation(AppDependencies.navigateLibraries)
-    implementation(platform(AppDependencies.firebaseBom))
-    implementation(AppDependencies.firebaseCrashlytics)
+    // lifecycle
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
-    implementation(project(Modules.data))
-    implementation(project(Modules.domain))
-    implementation(project(Modules.content))
-    implementation(project(Modules.authentication))
-    implementation(project(Modules.feed))
-    implementation(project(Modules.dashboard))
-    implementation(project(Modules.account))
-    implementation(project(Modules.leaderboard))
-    implementation(project(Modules.reward))
-    implementation(project(Modules.obd))
+    // ui
+    implementation(libs.countryCodePicker)
+    implementation(libs.circleIndicatorView)
 
-    implementation(AppDependencies.countryCodePicker)
-
-    implementation(AppDependencies.trackingApi)
-    implementation(AppDependencies.circleIndicatorView)
-    implementation(AppDependencies.roomRuntime)
-    kapt(AppDependencies.roomCompiler)
+    // navigation
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 }

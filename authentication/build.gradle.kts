@@ -1,57 +1,21 @@
 plugins {
-    id(Plugins.androidLibrary)
-    kotlin(Plugins.android)
-    id(Plugins.kotlinKapt)
+    id("telematics.android.library")
 }
 
 
 android {
-
-    compileSdkVersion(AppConfig.compileSdk)
-
-    defaultConfig {
-        versionCode = AppConfig.versionCode
-        versionName = AppConfig.versionName
-        minSdkVersion(AppConfig.minSdk)
-        targetSdkVersion(AppConfig.targetSdk)
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            debuggable(false)
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-
-        }
-        getByName("debug") {
-            isMinifyEnabled = false
-            debuggable(true)
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    namespace = "com.telematics.authentication"
 }
 
 dependencies {
 
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":domain"))
+    implementation(project(":data"))
 
-    implementation(AppDependencies.moduleLibraries)
-    implementation(project(Modules.domain))
-    implementation(project(Modules.data))
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.storage)
 
-    implementation(platform(AppDependencies.firebaseBom))
-    implementation(AppDependencies.firebase)
-
-    implementation(AppDependencies.loginAuthFramework)
+    implementation(libs.loginAuthFramework)
 }

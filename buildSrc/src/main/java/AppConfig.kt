@@ -3,9 +3,7 @@ object AppConfig {
     private const val name = "telemati"
 
     const val applicationId = "$applicationIdPrefix.$name"
-    const val compileSdk = 32
-    const val minSdk = 21
-    const val targetSdk = 32
+
     const val versionName = "1.0.0"
     const val versionCode = 1
 
@@ -20,6 +18,9 @@ object AppConfig {
     const val INSTANCE_KEY = "\"e5106118-a18f-4cc6-82ff-c0d411ade22f\""
 
     const val GOOGLE_MAP_API = "AIzaSyB2JKuXk1J61r_InABhYYhpOvkFMqzgdK4"
+
+    // Needs request notification permission(Android 13+)
+    const val REQUEST_NOTIFICATION_PERMISSION = "false"
 
     const val USER_SERVICE_URL = "\"https://user.telematicssdk.com/\""
     const val USER_SERVICE_URL_DEV = "\"https://user.telematicssdk.com/\""
