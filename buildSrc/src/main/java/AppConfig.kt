@@ -4,7 +4,7 @@ object AppConfig {
 
     const val applicationId = "$applicationIdPrefix.$name"
 
-    const val versionName = "1.0.0"
+    const val versionName = "1.0.1"
     const val versionCode = 1
 
     const val SOURCE = "\"Zenroad\""

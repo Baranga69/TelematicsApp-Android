@@ -1,6 +1,7 @@
 package hilt_aggregated_deps;
 
 import dagger.hilt.processor.internal.aggregateddeps.AggregatedDeps;
+import javax.annotation.processing.Generated;
 
 /**
  * This class should only be referenced by generated code! This class aggregates information across multiple compilations.
@@ -9,5 +10,6 @@ import dagger.hilt.processor.internal.aggregateddeps.AggregatedDeps;
     components = "dagger.hilt.android.components.FragmentComponent",
     entryPoints = "com.telematics.features.leaderboard.ui.leaderboard_details.page.LeaderboardDetailsPageFragment_GeneratedInjector"
 )
+@Generated("dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsGenerator")
 public class _com_telematics_features_leaderboard_ui_leaderboard_details_page_LeaderboardDetailsPageFragment_GeneratedInjector {
 }
